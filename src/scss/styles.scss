@@ -1,0 +1,167 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+//esta venia en las indicaciones
+$fontPT:'PT Sans', sans-serif;
+//esta venia en el waiframe
+$fontRoboto:'Poppins', sans-serif;
+$custom-color: #4a65a3; 
+$positive-color: #70c575;
+$negative-color: #e26261;
+
+body {
+    font-family: $fontRoboto; 
+    font-size: 62.5%;
+  }
+
+.text-primary{
+    color:$custom-color;
+}
+
+.color-primary{
+    background-color: $custom-color;
+}
+
+.text-positive{
+    color: $positive-color;
+}
+
+.text-negative{
+    color: $negative-color;
+}
+
+.icon-positive{
+  background-color: $positive-color;
+  border-radius: 5px;
+}
+
+.icon-negative{
+  background-color: $negative-color;
+  border-radius: 100%;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 35px;
+    transform: rotate(180deg);
+    border: none;
+    background-color: rgb(43, 41, 41);
+    margin: 0 10px;
+}
+
+//* Estilos del contenedor fluid */
+.custom-carousel-container {
+    width: 90%;
+    overflow-x: hidden; /* Oculta el scroll horizontal del contenedor fluid */
+    background-color: $custom-color;
+    color: white;
+  }
+  
+  /* Estilos del contenedor interno con scroll */
+  .custom-carousel {
+    display: flex;
+    overflow-x: scroll; /* Añade el scroll horizontal al contenedor interno */
+    scroll-snap-type: x mandatory; /* Obliga a los elementos a hacer snap al hacer scroll */
+    -webkit-overflow-scrolling: touch; /* Añade soporte para scroll fluido en iOS */
+    /* Estilos del scroll */
+    scrollbar-width:none; /* Ancho del scrollbar */
+    scrollbar-color: grey lightgrey; /* Color del scrollbar */
+  }
+  
+  /* Estilos de los meses */
+  .month-item {
+    flex: 0 0 33.33%; /* Cada mes ocupa 1/3 del ancho del contenedor */
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* Estilos del mes seleccionado */
+  .month-item.selected {
+    font-weight: bolder;
+  }
+  
+  
+  /* Estilos del scrollbar */
+  .custom-carousel::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+    height: 4px;
+    cursor: pointer;
+  }
+  
+  .custom-carousel::-webkit-scrollbar-thumb {
+    background-color:#f8f8f8; /* Color del thumb del scrollbar */
+    border-radius: 8px; /* Redondea los bordes del thumb */
+  }
+  
+  .custom-carousel::-webkit-scrollbar-thumb:hover {
+    background-color: #f8f8f8; /* Color del thumb del scrollbar en hover */
+    height: 3px;
+  }
+  
+  .custom-carousel::-webkit-scrollbar-thumb:active {
+    background-color: #f8f8f8; /* Color del thumb del scrollbar al hacer clic */
+    height: 3px;
+  }
+
+  .iconUp{
+    transform: rotate(180deg);
+    position: relative;
+    left: 15px;
+  }
+
+  /* Estilo predeterminado para el contenido */
+.content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease; /* Transiciones para opacity y max-height */
+}
+
+/* Estilo para el contenido cuando está visible */
+.visible {
+  opacity: 1;
+  max-height: 500px; /* Establece una altura máxima para que el contenido se muestre gradualmente */
+  transition: opacity 0.3s ease, max-height 0.3s ease; 
+}
+
+.customButton{
+  width: 300px;
+  padding: 15px;
+  border: none;
+  background-color:$custom-color;
+  border-radius: 2px;
+  position: fixed;
+  top:90%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el elemento exactamente en el centro */
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+}
+
+.button{
+  min-width: 200px;
+  padding: 15px;
+  border: none;
+  background-color:$custom-color;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 500;
+}
+
+.portal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(43, 43, 43, 0.479);
+  height: 100vh;
+  width: 100vw;
+  position:fixed;
+  z-index: 2;
+}
+
+  
