@@ -20,7 +20,7 @@ function ItemRecord({ id, date, concept, amount, type, count, bank }) {
 
                 <div class='d-flex col-5 align-items-center justify-content-end'>
                      <button onClick={viewDetails} 
-                     class={`d-flex align-items-center justify-content-center border-0 fw-bold`}>
+                     class={`d-flex align-items-cente bg-light justify-content-center border-0 fw-bold`}>
                         <span class={`fs-6 ${icon? 'text-positive' : 'text-negative'} ${amount}`} >{`${icon? '+ $' : '- $'}  ${amount}`}</span>
                         <i class={`col-4 px-3 fs-6 ${details ? "fa-solid fa-chevron-down iconUp" : "fa-solid fa-chevron-down"}`}></i>
                      </button>

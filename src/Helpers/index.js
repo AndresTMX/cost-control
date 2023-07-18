@@ -29,16 +29,17 @@ export function formatDate(dateString) {
 
     let date
     
-    if(dateString){
-        date = new Date(dateString);  
+    if(!dateString){
+        date = new Date();  
     }else{
-        date = new Date();
+        date = new Date(dateString);
     }
 
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const day = String(date.getDate()).padStart(2, "0");
-    return `${year}-${month}-${day}`
+    const dayNum = parseInt(day)
+    return `${year}-${month}-${dayNum + 1}`
     
 }
 
@@ -48,8 +49,7 @@ export function IsToday(dateString){
 
     const dateTransaction = formatDate(dateString)
 
-    const dayTransaction = dateTransaction.split('-', 3).slice(2-3);
-    console.log("🚀 ~ file: index.js:52 ~ IsToday ~ dayTransaction:", dayTransaction)
+    const dayTransaction = dateTransaction;
 
     const dayCurrent = dateCurrent.split('-', 3).slice(2-3);
 

@@ -5,12 +5,10 @@ import { formatDate } from "../Helpers";
 function useFilterDay(arrayRecords) {
     
   const [groupedData, setGroupedData] = useState({});
-  const [dateFormat, setDate] = useState();
 
   useEffect(() => {
     const groupedData = arrayRecords.reduce((result, obj) => {      
       const formattedDate = formatDate(obj.date);
-      setDate(formattedDate);
       
       if (!result[formattedDate]) {
         result[formattedDate] = [];
@@ -21,7 +19,7 @@ function useFilterDay(arrayRecords) {
     setGroupedData(groupedData);
   }, [arrayRecords]);
 
-  return {groupedData, dateFormat};
+  return {groupedData};
 }
 
 export { useFilterDay };
