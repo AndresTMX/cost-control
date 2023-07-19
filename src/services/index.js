@@ -13,3 +13,4 @@ export async function fetchTransactionsByMonth(month) {
       return null;
     }
   }
+

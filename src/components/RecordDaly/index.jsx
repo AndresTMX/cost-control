@@ -2,7 +2,8 @@ import { ItemRecord } from "../ItemRecord";
 import { IsToday } from "../../Helpers";
 import { useFilterDay } from "../../Hooks/useFilterDay";
 
-function RecordDaly({ records, month }) {
+function RecordDaly({ records}) {
+  
   const { groupedData } = useFilterDay(records);
 
   return (
@@ -10,16 +11,16 @@ function RecordDaly({ records, month }) {
       <section class="d-flex flex-column col-10 align-items-center m-auto h-75 custom-carousel">
         {Object.keys(groupedData).map((date) => (
           <div
-            class="d-flex flex-column bg-light col-11 m-1 p-2 align-items-center shadow-sm rounded-2"
+            class="d-flex flex-column col-11 m-1 p-2 align-items-center"
             key={date}
           >
             <div className="d-flex px-3 col-12 fw-bold justify-content-start">
-              <span>{date}</span>
+              <span>{`${IsToday(date)}`}</span>  
             </div>
 
             {groupedData[date].map((record, index) => (
               <ItemRecord
-                key={`${date}_${index}`} // Agregar un sufijo único al key
+                key={`${date}_${index}`}
                 id={record.id}
                 date={record.date}
                 concept={record.concept}

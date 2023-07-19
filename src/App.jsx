@@ -19,7 +19,6 @@ function App() {
 
   const [state, dispatch] = useContext(Transaccions);
   const {month} = state;
-
   const {dataMonth, loading, error} = useGetDataForMonth(month);
   const {balance, income, expense} = useBalance(dataMonth);
 
@@ -41,7 +40,7 @@ function App() {
         expense={expense}
       />
 
-      <RecordDaly records={dataMonth} month={month} />
+      <RecordDaly records={dataMonth} />
 
       <CustomButton text={"Agregar Movimiento"} typeButton='static' action={() => toggleModal(dispatch, true)}/>
 

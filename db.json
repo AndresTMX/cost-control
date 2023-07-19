@@ -133,6 +133,17 @@
             }
         },
         {
+            "id": "13",
+            "date": "Thu Jul 18 2023 07:34:04 GMT-060",
+            "concept": "Transaction 1",
+            "amount": 218,
+            "typeOperation": "retiro",
+            "details": {
+                "count": "credit",
+                "bank": "santander"
+            }
+        },
+        {
             "id": "11",
             "date": "Thu Jul 13 2023 07:34:04 GMT-060",
             "concept": "Transaction 1",
@@ -144,7 +155,7 @@
             }
         },
         {
-            "id": "12",
+            "id": "14",
             "date": "Thu Jul 13 2023 11:19:51 GMT-060",
             "concept": "Transaction 2",
             "amount": 307,
@@ -155,7 +166,7 @@
             }
         },
         {
-            "id": "13",
+            "id": "15",
             "date": "Thu Aug 13 2023 20:00:23 GMT-060",
             "concept": "Transaction 3",
             "amount": 409,
@@ -166,7 +177,7 @@
             }
         },
         {
-            "id": "14",
+            "id": "16",
             "date": "Wed Aug 12 2023 19:27:53 GMT-060",
             "concept": "Transaction 4",
             "amount": 936,
@@ -177,7 +188,7 @@
             }
         },
         {
-            "id": "15",
+            "id": "17",
             "date": "Wed Sep 12 2023 10:03:06 GMT-060",
             "concept": "Transaction 5",
             "amount": 284,
@@ -188,7 +199,7 @@
             }
         },
         {
-            "id": "16",
+            "id": "18",
             "date": "Wed Sep 12 2023 04:51:59 GMT-060",
             "concept": "Transaction 6",
             "amount": 736,
@@ -199,7 +210,7 @@
             }
         },
         {
-            "id": "17",
+            "id": "19",
             "date": "Tue Oct 11 2023 01:41:23 GMT-060",
             "concept": "Transaction 7",
             "amount": 589,
@@ -210,7 +221,7 @@
             }
         },
         {
-            "id": "18",
+            "id": "20",
             "date": "Tue Oct 11 2023 12:20:17 GMT-060",
             "concept": "Transaction 8",
             "amount": 382,
@@ -221,7 +232,7 @@
             }
         },
         {
-            "id": "19",
+            "id": "21",
             "date": "Tue Nov 11 2023 16:53:32 GMT-060",
             "concept": "Transaction 9",
             "amount": 743,
@@ -232,7 +243,7 @@
             }
         },
         {
-            "id": "20",
+            "id": "22",
             "date": "Mon Nov 10 2023 06:30:02 GMT-060",
             "concept": "Transaction 0",
             "amount": 16,
@@ -243,7 +254,7 @@
             }
         },
         {
-            "id": "21",
+            "id": "23",
             "date": "Mon Dec 10 2023 09:12:37 GMT-060",
             "concept": "Transaction 1",
             "amount": 432,
@@ -254,7 +265,7 @@
             }
         },
         {
-            "id": "22",
+            "id": "24",
             "date": "Mon Dec 10 2023 18:14:58 GMT-060",
             "concept": "Transaction 2",
             "amount": 153,
@@ -265,7 +276,7 @@
             }
         },
         {
-            "id": "23",
+            "id": "25",
             "date": "Mon Dec 10 2023 22:00:09 GMT-060",
             "concept": "Transaction 3",
             "amount": 927,
@@ -276,7 +287,7 @@
             }
         },
         {
-            "id": "24",
+            "id": "26",
             "date": "Sun Dec 09 2023 14:26:55 GMT-060",
             "concept": "Transaction 4",
             "amount": 37,

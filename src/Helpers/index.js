@@ -25,45 +25,40 @@ export const setMonth = (dispatch, payload) => {
     dispatch({ type: actionTypes.setMonth, payload: month });
 };
 
+export function transformDateLocal (date) {
+    return date.toLocaleDateString("es-ES", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+
+}
+
 export function formatDate(dateString) {
-
-    let date
-    
-    if(!dateString){
-        date = new Date();  
-    }else{
-        date = new Date(dateString);
-    }
-
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const day = String(date.getDate()).padStart(2, "0");
-    const dayNum = parseInt(day)
-    return `${year}-${month}-${dayNum + 1}`
-    
+  const date = new Date(dateString);
+  const tranformDate = transformDateLocal(date);  
+  const year =  tranformDate.split(" ")[4];
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day =  tranformDate.split(" ")[0];  
+  return `${year}-${month}-${day}`
+  
 }
 
 export function IsToday(dateString){
 
-    const dateCurrent = formatDate()
+    const dateCurrent = new Date();
+    const dateTransaction = new Date(dateString);
+    
+    const dayTransaction = transformDateLocal(dateTransaction);
+    const dayCurrent = transformDateLocal(dateCurrent);
 
-    const dateTransaction = formatDate(dateString)
-
-    const dayTransaction = dateTransaction;
-
-    const dayCurrent = dateCurrent.split('-', 3).slice(2-3);
-
-    // console.log(`Hoy - ${dateCurrent.split('-', 3).splice(2)} `)
+    const dayTransactionForce = parseInt(dayTransaction.split(" ")[0]) + 1;
 
     if(dayTransaction === dayCurrent){
-        console.log( `Hoy ${dateCurrent.split(3,'-').splice(2)}`)
+      return `Hoy ${dayTransaction.split(" ")[0]} ${dayTransaction.split(" ")[2]}`
     }
 
-    // if(dayTransaction === dayCurrent - 1 ){
-    //     console.log( `Ayer ${dateCurrent.split(3,'-').splice(2)}`)
-    // }
-
-    return dayTransaction
+    return `${dayTransactionForce} ${dayTransaction.split(" ")[2]}`
 
 }
 
