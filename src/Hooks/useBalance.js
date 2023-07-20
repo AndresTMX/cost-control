@@ -42,7 +42,7 @@ function useBalance(dataMonth) {
         let total = 0;
 
         array.forEach((income) => {
-          total = total + income.amount;
+          total = total + parseInt(income.amount);
         });
 
         return total;

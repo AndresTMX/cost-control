@@ -1,301 +1,323 @@
 {
-    "transactions": [
-        {
-            "id": "1",
-            "date": "Sun Jan 16 2023 01:41:23 GMT-0600",
-            "concept": "Transaction 1",
-            "amount": 589,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "2",
-            "date": "Sun Jan 16 2023 12:20:17 GMT-0600",
-            "concept": "Transaction 2",
-            "amount": 382,
-            "typeOperation": "ingreso",
-            "details": {
-                "count": "credit",
-                "bank": "bancomer"
-            }
-        },
-        {
-            "id": "3",
-            "date": "Sun Feb 16 2023 16:53:32 GMT-0600",
-            "concept": "Transaction 3",
-            "amount": 743,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "4",
-            "date": "Sat Feb 15 2023 06:30:02 GMT-0600",
-            "concept": "Transaction 4",
-            "amount": 16,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "debit",
-                "bank": "bancomer"
-            }
-        },
-        {
-            "id": "5",
-            "date": "Sat Mar 15 2023 09:12:37 GMT-0600",
-            "concept": "Transaction 5",
-            "amount": 432,
-            "typeOperation": "ingreso",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "6",
-            "date": "Sat Mar 15 2023 18:14:58 GMT-0600",
-            "concept": "Transaction 6",
-            "amount": 153,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "debit",
-                "bank": "bancomer"
-            }
-        },
-        {
-            "id": "7",
-            "date": "Sat Apr 15 2023 22:00:09 GMT-0600",
-            "concept": "Transaction 7",
-            "amount": 927,
-            "typeOperation": "ingreso",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "8",
-            "date": "Fri Apr 14 2023 14:26:55 GMT-0600",
-            "concept": "Transaction 8",
-            "amount": 37,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "debit",
-                "bank": "bancomer"
-            }
-        },
-        {
-            "id": "9",
-            "date": "Fri May 14 2023 17:09:11 GMT-0600",
-            "concept": "Transaction 9",
-            "amount": 301,
-            "typeOperation": "ingreso",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "10",
-            "date": "Fri May 14 2023 23:47:01 GMT-060",
-            "concept": "Transaction 0",
-            "amount": 682,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "debit",
-                "bank": "bancomer"
-            }
-        },
-        {
-            "id": "11",
-            "date": "Thu Jun 13 2023 07:34:04 GMT-060",
-            "concept": "Transaction 1",
-            "amount": 118,
-            "typeOperation": "ingreso",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "12",
-            "date": "Thu Jun 13 2023 11:19:51 GMT-060",
-            "concept": "Transaction 2",
-            "amount": 507,
-            "typeOperation": "ingreso",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "13",
-            "date": "Thu Jul 18 2023 07:34:04 GMT-060",
-            "concept": "Transaction 1",
-            "amount": 218,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "11",
-            "date": "Thu Jul 13 2023 07:34:04 GMT-060",
-            "concept": "Transaction 1",
-            "amount": 218,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "14",
-            "date": "Thu Jul 13 2023 11:19:51 GMT-060",
-            "concept": "Transaction 2",
-            "amount": 307,
-            "typeOperation": "ingreso",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "15",
-            "date": "Thu Aug 13 2023 20:00:23 GMT-060",
-            "concept": "Transaction 3",
-            "amount": 409,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "debit",
-                "bank": "bancomer"
-            }
-        },
-        {
-            "id": "16",
-            "date": "Wed Aug 12 2023 19:27:53 GMT-060",
-            "concept": "Transaction 4",
-            "amount": 936,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "debit",
-                "bank": "bancomer"
-            }
-        },
-        {
-            "id": "17",
-            "date": "Wed Sep 12 2023 10:03:06 GMT-060",
-            "concept": "Transaction 5",
-            "amount": 284,
-            "typeOperation": "ingreso",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "18",
-            "date": "Wed Sep 12 2023 04:51:59 GMT-060",
-            "concept": "Transaction 6",
-            "amount": 736,
-            "typeOperation": "ingreso",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "19",
-            "date": "Tue Oct 11 2023 01:41:23 GMT-060",
-            "concept": "Transaction 7",
-            "amount": 589,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "debit",
-                "bank": "bancomer"
-            }
-        },
-        {
-            "id": "20",
-            "date": "Tue Oct 11 2023 12:20:17 GMT-060",
-            "concept": "Transaction 8",
-            "amount": 382,
-            "typeOperation": "ingreso",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "21",
-            "date": "Tue Nov 11 2023 16:53:32 GMT-060",
-            "concept": "Transaction 9",
-            "amount": 743,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "debit",
-                "bank": "bancomer"
-            }
-        },
-        {
-            "id": "22",
-            "date": "Mon Nov 10 2023 06:30:02 GMT-060",
-            "concept": "Transaction 0",
-            "amount": 16,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "debit",
-                "bank": "bancomer"
-            }
-        },
-        {
-            "id": "23",
-            "date": "Mon Dec 10 2023 09:12:37 GMT-060",
-            "concept": "Transaction 1",
-            "amount": 432,
-            "typeOperation": "ingreso",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "24",
-            "date": "Mon Dec 10 2023 18:14:58 GMT-060",
-            "concept": "Transaction 2",
-            "amount": 153,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "debit",
-                "bank": "bancomer"
-            }
-        },
-        {
-            "id": "25",
-            "date": "Mon Dec 10 2023 22:00:09 GMT-060",
-            "concept": "Transaction 3",
-            "amount": 927,
-            "typeOperation": "ingreso",
-            "details": {
-                "count": "credit",
-                "bank": "santander"
-            }
-        },
-        {
-            "id": "26",
-            "date": "Sun Dec 09 2023 14:26:55 GMT-060",
-            "concept": "Transaction 4",
-            "amount": 37,
-            "typeOperation": "retiro",
-            "details": {
-                "count": "debit",
-                "bank": "bancomer"
-            }
-        }
-    ]
+  "transactions": [
+    {
+      "id": "1",
+      "date": "Sun Jan 16 2023 01:41:23 GMT-0600",
+      "concept": "Transaction 1",
+      "amount": 589,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "2",
+      "date": "Sun Jan 16 2023 12:20:17 GMT-0600",
+      "concept": "Transaction 2",
+      "amount": 382,
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "credit",
+        "bank": "bancomer"
+      }
+    },
+    {
+      "id": "3",
+      "date": "Sun Feb 16 2023 16:53:32 GMT-0600",
+      "concept": "Transaction 3",
+      "amount": 743,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "4",
+      "date": "Sat Feb 15 2023 06:30:02 GMT-0600",
+      "concept": "Transaction 4",
+      "amount": 16,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debit",
+        "bank": "bancomer"
+      }
+    },
+    {
+      "id": "5",
+      "date": "Sat Mar 15 2023 09:12:37 GMT-0600",
+      "concept": "Transaction 5",
+      "amount": 432,
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "6",
+      "date": "Sat Mar 15 2023 18:14:58 GMT-0600",
+      "concept": "Transaction 6",
+      "amount": 153,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debit",
+        "bank": "bancomer"
+      }
+    },
+    {
+      "id": "7",
+      "date": "Sat Apr 15 2023 22:00:09 GMT-0600",
+      "concept": "Transaction 7",
+      "amount": 927,
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "8",
+      "date": "Fri Apr 14 2023 14:26:55 GMT-0600",
+      "concept": "Transaction 8",
+      "amount": 37,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debit",
+        "bank": "bancomer"
+      }
+    },
+    {
+      "id": "9",
+      "date": "Fri May 14 2023 17:09:11 GMT-0600",
+      "concept": "Transaction 9",
+      "amount": 301,
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "10",
+      "date": "Fri May 14 2023 23:47:01 GMT-060",
+      "concept": "Transaction 0",
+      "amount": 682,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debit",
+        "bank": "bancomer"
+      }
+    },
+    {
+      "id": "11",
+      "date": "Thu Jun 13 2023 07:34:04 GMT-060",
+      "concept": "Transaction 1",
+      "amount": 118,
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "12",
+      "date": "Thu Jun 13 2023 11:19:51 GMT-060",
+      "concept": "Transaction 2",
+      "amount": 507,
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "13",
+      "date": "Thu Jul 18 2023 07:34:04 GMT-060",
+      "concept": "Transaction 1",
+      "amount": 218,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "11",
+      "date": "Thu Jul 13 2023 07:34:04 GMT-060",
+      "concept": "Transaction 1",
+      "amount": 218,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "14",
+      "date": "Thu Jul 13 2023 11:19:51 GMT-060",
+      "concept": "Transaction 2",
+      "amount": 307,
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "15",
+      "date": "Thu Aug 13 2023 20:00:23 GMT-060",
+      "concept": "Transaction 3",
+      "amount": 409,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debit",
+        "bank": "bancomer"
+      }
+    },
+    {
+      "id": "16",
+      "date": "Wed Aug 12 2023 19:27:53 GMT-060",
+      "concept": "Transaction 4",
+      "amount": 936,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debit",
+        "bank": "bancomer"
+      }
+    },
+    {
+      "id": "17",
+      "date": "Wed Sep 12 2023 10:03:06 GMT-060",
+      "concept": "Transaction 5",
+      "amount": 284,
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "18",
+      "date": "Wed Sep 12 2023 04:51:59 GMT-060",
+      "concept": "Transaction 6",
+      "amount": 736,
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "19",
+      "date": "Tue Oct 11 2023 01:41:23 GMT-060",
+      "concept": "Transaction 7",
+      "amount": 589,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debit",
+        "bank": "bancomer"
+      }
+    },
+    {
+      "id": "20",
+      "date": "Tue Oct 11 2023 12:20:17 GMT-060",
+      "concept": "Transaction 8",
+      "amount": 382,
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "21",
+      "date": "Tue Nov 11 2023 16:53:32 GMT-060",
+      "concept": "Transaction 9",
+      "amount": 743,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debit",
+        "bank": "bancomer"
+      }
+    },
+    {
+      "id": "22",
+      "date": "Mon Nov 10 2023 06:30:02 GMT-060",
+      "concept": "Transaction 0",
+      "amount": 16,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debit",
+        "bank": "bancomer"
+      }
+    },
+    {
+      "id": "23",
+      "date": "Mon Dec 10 2023 09:12:37 GMT-060",
+      "concept": "Transaction 1",
+      "amount": 432,
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "24",
+      "date": "Mon Dec 10 2023 18:14:58 GMT-060",
+      "concept": "Transaction 2",
+      "amount": 153,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debit",
+        "bank": "bancomer"
+      }
+    },
+    {
+      "id": "25",
+      "date": "Mon Dec 10 2023 22:00:09 GMT-060",
+      "concept": "Transaction 3",
+      "amount": 927,
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "credit",
+        "bank": "santander"
+      }
+    },
+    {
+      "id": "26",
+      "date": "Sun Dec 09 2023 14:26:55 GMT-060",
+      "concept": "Transaction 4",
+      "amount": 37,
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debit",
+        "bank": "bancomer"
+      }
+    },
+    {
+      "id": "fe19015d-f894-43ac-a2bd-a67891009625",
+      "date": "20 de julio de 2023",
+      "concept": "Uber",
+      "amount": "456",
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debit",
+        "bank": "banamex"
+      }
+    },
+    {
+      "id": "30777b1a-6979-470d-ad59-c00d7fb6753b",
+      "date": "20 de julio de 2023",
+      "concept": "Pago",
+      "amount": "1000",
+      "typeOperation": "ingreso",
+      "details": {
+        "acount": "debito",
+        "bank": "banamex"
+      }
+    }
+  ]
 }

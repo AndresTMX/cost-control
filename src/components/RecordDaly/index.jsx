@@ -26,7 +26,7 @@ function RecordDaly({ records}) {
                 concept={record.concept}
                 amount={record.amount}
                 type={record.typeOperation}
-                count={record.details.count}
+                count={record.details.acount}
                 bank={record.details.bank}
               />
             ))}
