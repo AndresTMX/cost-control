@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { toggleModal } from "../../Helpers";
+import { toggleModal, updateRecords } from "../../Helpers";
 import { CustomButton } from "../CustomButton";
 import { postTransaction } from "../../services";
 import { v4 as uuidv4 } from 'uuid';
-import { transformDateLocal } from "../../Helpers";
 
-function FormAddRecord({ dispatch }) {
+function FormAddRecord({ state, dispatch }) {
+
+  const {updates} = state
     
   const [formData, setFormData] = useState({
     id:"",
@@ -19,12 +20,10 @@ function FormAddRecord({ dispatch }) {
   }
   });
 
-
   const getFormData = (form) => {
 
     const id = uuidv4();
     const date = new Date();
-    const formatDate = transformDateLocal(date);
     const concept= form.querySelector("#concept").value;
     const amount = form.querySelector("#amount").value;
     const typeOperation = form.querySelector("#typeOperation").value;
@@ -43,7 +42,7 @@ function FormAddRecord({ dispatch }) {
 
     return {
       id,
-      date: formatDate,
+      date,
       concept,
       amount,
       typeOperation,
@@ -53,17 +52,17 @@ function FormAddRecord({ dispatch }) {
       }
 
   }
-};
+  };
 
   async function handleSubmit(event) {
     event.preventDefault();
 
     const form = event.target;
     const formData = getFormData(form);
-    console.log("🚀 ~ file: index.jsx:49 ~ handleSubmit ~ formData:", formData);
 
     try {
       const response = await postTransaction(formData)
+      updateRecords(dispatch, updates, formData )
       toggleModal(dispatch, false)
       return response;
     } catch (error) {
@@ -71,8 +70,7 @@ function FormAddRecord({ dispatch }) {
       console.error(errorMessage);
       throw new Error(errorMessage);
     }
-  }
-
+  };
 
   return (
     <>

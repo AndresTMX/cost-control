@@ -1,11 +1,15 @@
+import { formatDate } from "../Helpers";
+
+const date = new Date()
+const format = formatDate(date)
+export const Month = date.toLocaleString(undefined, { month: '2-digit' });
+export const Year = format.split("-", 3)[0]
+export const currentDate = `${Year}-${Month}`
 
 const initalState = {
   modal: false,
-  month:'Jan',
-  income:0,
-  expense:0,
-  balance:0,
-  dataMonth:[]
+  month:currentDate,
+  updates:[],
 };
 
 const reducer = (state, action) => {
@@ -19,9 +23,7 @@ const reducer = (state, action) => {
 const actionTypes = {
   setModal: "SET_MODAL",
   setMonth:"SET_MONTH",
-  setIncome: "SET_INCOME",
-  setExpense:"SET_EXPENSE",
-  setBalance:"SET_BALANCE",
+  setUpdate: "SET_UPDATE",
 };
 
 const reducerStore = (state, payload) => ({
@@ -33,18 +35,10 @@ const reducerStore = (state, payload) => ({
     ...state,
     month: payload,
   },
-  [actionTypes.setIncome]: {
+  [actionTypes.setUpdate]: {
     ...state,
-    income: payload,
-  },
-  [actionTypes.setExpense]: {
-    ...state,
-    expense: payload,
-  },
-  [actionTypes.setBalance]: {
-    ...state,
-    balance: payload,
-  },
+    updates: payload,
+  }
 });
 
 export {initalState, reducer, actionTypes}

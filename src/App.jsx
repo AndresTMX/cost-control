@@ -18,8 +18,7 @@ import { useBalance } from './Hooks/useBalance'
 function App() {
 
   const [state, dispatch] = useContext(Transaccions);
-  const {month} = state;
-  const {dataMonth, loading, error} = useGetDataForMonth(month);
+  const {dataMonth, loading, error} = useGetDataForMonth(dispatch, state);
   const {balance, income, expense} = useBalance(dataMonth);
 
   return (
@@ -32,22 +31,22 @@ function App() {
         height: "100vh",
       }}
     >
-      <DateBar dispatch={dispatch} />
-
+      <DateBar state={state} dispatch={dispatch} />
+      
       <BalanceItem
         balance={balance}
         income={income}
         expense={expense}
       />
 
-      <RecordDaly records={dataMonth} />
+      <RecordDaly records={dataMonth} loading={loading} error={error} />
 
       <CustomButton text={"Agregar Movimiento"} typeButton='static' action={() => toggleModal(dispatch, true)}/>
 
       {state.modal && (
         <PortalComponent>
           <Modal> 
-             <FormAddRecord dispatch={dispatch}/>
+             <FormAddRecord state={state} dispatch={dispatch}/>
           </Modal>
         </PortalComponent>
       )}

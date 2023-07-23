@@ -20,13 +20,11 @@ export const toggleModal = (dispatch, payload) => {
 }
 
 export const setMonth = (dispatch, payload) => {  
-      
-    const month = allMonths[payload];
-    dispatch({ type: actionTypes.setMonth, payload: month });
+    dispatch({ type: actionTypes.setMonth, payload: payload });
 };
 
 export function transformDateLocal (date) {
-    return date.toLocaleDateString("es-ES", {
+    return date.toLocaleDateString("en-EN", {
         year: "numeric",
         month: "long",
         day: "numeric",
@@ -36,10 +34,10 @@ export function transformDateLocal (date) {
 
 export function formatDate(dateString) {
   const date = new Date(dateString);
-  const tranformDate = transformDateLocal(date);  
-  const year =  tranformDate.split(" ")[4];
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day =  tranformDate.split(" ")[0];  
+  const tranformDate = transformDateLocal(date); 
+  const year =  tranformDate.split(" ")[2]
+  const month = tranformDate.split(" ")[0].slice(0,3);
+  const day =  tranformDate.split(" ")[1];  
   return `${year}-${month}-${day}`
   
 }
@@ -51,14 +49,29 @@ export function IsToday(dateString){
     
     const dayTransaction = transformDateLocal(dateTransaction);
     const dayCurrent = transformDateLocal(dateCurrent);
-
-    const dayTransactionForce = parseInt(dayTransaction.split(" ")[0]) + 1;
-
-    if(dayTransaction === dayCurrent){
-      return `Hoy ${dayTransaction.split(" ")[0]} ${dayTransaction.split(" ")[2]}`
+    
+    if(dayTransaction == dayCurrent){
+      return `Hoy ${dayTransaction.split(",")[0].split(" ")[1]} ${formatDate(dayTransaction).split("-")[1]}`
     }
 
-    return `${dayTransactionForce} ${dayTransaction.split(" ")[2]}`
+    return `${dayTransaction.split(",")[0].split(" ")[1]} ${formatDate(dayTransaction).split("-")[1]}`
 
 }
+
+export function updateRecords(dispatch, records, payload){
+
+  if(payload){
+ 
+    const newState = records.length? 
+    [...records, payload] : [payload];
+  
+    dispatch({type:actionTypes.setUpdate, payload: newState});
+
+  }
+
+  dispatch({type:actionTypes.setUpdate, payload: records});
+
+
+}
+
 
