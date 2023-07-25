@@ -18,8 +18,8 @@ import { useBalance } from './Hooks/useBalance'
 function App() {
 
   const [state, dispatch] = useContext(Transaccions);
-  const {dataMonth, loading, error} = useGetDataForMonth(dispatch, state);
-  const {balance, income, expense} = useBalance(dataMonth);
+  const { loading, error} = useGetDataForMonth(dispatch, state);
+  const {balance, income, expense} = useBalance(state.dataMonth);
 
   return (
     <div
@@ -39,7 +39,7 @@ function App() {
         expense={expense}
       />
 
-      <RecordDaly records={dataMonth} loading={loading} error={error} />
+      <RecordDaly records={state.dataMonth} loading={loading} error={error} />
 
       <CustomButton text={"Agregar Movimiento"} typeButton='static' action={() => toggleModal(dispatch, true)}/>
 

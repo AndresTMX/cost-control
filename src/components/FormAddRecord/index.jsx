@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 function FormAddRecord({ state, dispatch }) {
 
-  const {updates} = state
+  const {dataMonth} = state;
     
   const [formData, setFormData] = useState({
     id:"",
@@ -59,10 +59,10 @@ function FormAddRecord({ state, dispatch }) {
 
     const form = event.target;
     const formData = getFormData(form);
-
+    
     try {
+      updateRecords(dispatch, dataMonth, formData)
       const response = await postTransaction(formData)
-      updateRecords(dispatch, updates, formData )
       toggleModal(dispatch, false)
       return response;
     } catch (error) {

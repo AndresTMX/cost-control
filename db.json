@@ -133,21 +133,10 @@
       }
     },
     {
-      "id": "c01ec708-df14-4f90-8446-c13220ca92ce",
-      "date": "2023-07-23T23:07:31.966Z",
-      "concept": "Uber",
-      "amount": "456",
-      "typeOperation": "ingreso",
-      "details": {
-        "acount": "credito",
-        "bank": "santander"
-      }
-    },
-    {
-      "id": "2cb43ed6-a363-4051-a67e-0ef0687b1fd3",
-      "date": "2023-07-24T06:23:25.203Z",
-      "concept": "Pago por servicios",
-      "amount": "5000",
+      "id": "a0aa1422-b795-4084-a9f9-0bf750384d3e",
+      "date": "2023-07-25T04:49:14.269Z",
+      "concept": "Nomina",
+      "amount": "10000",
       "typeOperation": "ingreso",
       "details": {
         "acount": "debito",
@@ -155,14 +144,25 @@
       }
     },
     {
-      "id": "1c129f3e-7801-4b72-ba4e-c7f5c28c9bfa",
-      "date": "2023-07-24T07:00:46.940Z",
-      "concept": "Transferencia a enrique",
-      "amount": "450",
+      "id": "fec00e7d-beb3-4258-9c3c-eb12e14cbc81",
+      "date": "2023-07-25T06:52:02.433Z",
+      "concept": "Ahorro",
+      "amount": "500",
       "typeOperation": "retiro",
       "details": {
         "acount": "debito",
         "bank": "bancomer"
+      }
+    },
+    {
+      "id": "fe06cf27-afa1-409b-bac3-3cc8bef1602a",
+      "date": "2023-07-25T06:53:04.177Z",
+      "concept": "Uber",
+      "amount": "45.50",
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debito",
+        "bank": "banamex"
       }
     }
   ]

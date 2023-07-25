@@ -58,19 +58,19 @@ export function IsToday(dateString){
 
 }
 
-export function updateRecords(dispatch, records, payload){
+export const updateRecords = (dispatch, records, payload) => {
 
-  if(payload){
- 
-    const newState = records.length? 
-    [...records, payload] : [payload];
-  
-    dispatch({type:actionTypes.setUpdate, payload: newState});
-
+  if(records.length > 0 && payload === undefined){
+    dispatch({type:actionTypes.setUpdate, payload: [...records]})
   }
 
-  dispatch({type:actionTypes.setUpdate, payload: records});
+  if(records.length === 0 && !!payload){
+    dispatch({type:actionTypes.setUpdate, payload: [payload]})
+  }
 
+  if(records.length > 0 && !!payload){
+    dispatch({type: actionTypes.setUpdate, payload:[...records, payload]})
+  }
 
 }
 

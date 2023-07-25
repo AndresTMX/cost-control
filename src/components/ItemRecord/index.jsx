@@ -8,19 +8,19 @@ function ItemRecord({ id, date, concept, amount, type, count, bank }) {
   };
 
   return (
-    <div className="d-flex flex-column col-12 bg-light my-1 shadow-sm rounded-2">
-      <div class="d-flex flex-row justify-content-between col-12 m-1 p-2 rounded-2">
-        <div class="d-flex col-7 fw-semibold flex-row align-items-center">
+    <div className="d-flex flex-column col-12 bg-light my-1 shadow-sm rounded-2 align-items-center">
+      <div class="d-flex flex-row justify-content-between col-12 m-1 p-2 rounded-2 ">
+        <div class="d-flex col-6 fw-semibold flex-row align-items-center">
           <span
             class={`p-3 mx-2 ${icon ? "icon-positive" : "icon-negative"}`}
           ></span>
           <span>{concept}</span>
         </div>
 
-        <div class="d-flex col-5 align-items-center justify-content-end">
+        <div class="d-flex col-6 align-items-center justify-content-end">
           <button
             onClick={viewDetails}
-            class={`d-flex align-items-cente bg-light justify-content-center border-0 fw-bold`}
+            class={`d-flex align-items-center bg-light justify-content-center border-0 fw-bold`}
           >
             <span
               class={`fs-6 ${
@@ -37,8 +37,9 @@ function ItemRecord({ id, date, concept, amount, type, count, bank }) {
           </button>
         </div>
       </div>
-
-      <div
+      
+      { details && (
+          <div
         class={`d-flex flex-column justify-content-between col-12 bg-light p-2 bg-danger ${
           details ? "visible" : "content"
         }`}
@@ -58,6 +59,8 @@ function ItemRecord({ id, date, concept, amount, type, count, bank }) {
           <span> {bank}</span>
         </div>
       </div>
+        )
+      }
     </div>
   );
 }

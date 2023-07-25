@@ -15,6 +15,12 @@ function RecordDaly({ records , loading, error}) {
         </section>
       )}
 
+      {!loading && !error && !Object.keys(groupedData).length > 0 &&(
+        <section class="d-flex flex-column col-10 align-items-center m-auto h-75 custom-carousel">
+          <strong>Sin movimientos agregados en este mes</strong>
+        </section>
+      )}
+
       {!loading && !error && (
         <section class="d-flex flex-column col-10 align-items-center m-auto h-75 custom-carousel">
           {Object.keys(groupedData).map((date) => (

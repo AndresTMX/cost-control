@@ -9,7 +9,7 @@ export const currentDate = `${Year}-${Month}`
 const initalState = {
   modal: false,
   month:currentDate,
-  updates:[],
+  dataMonth:[],
 };
 
 const reducer = (state, action) => {
@@ -37,7 +37,7 @@ const reducerStore = (state, payload) => ({
   },
   [actionTypes.setUpdate]: {
     ...state,
-    updates: payload,
+    dataMonth: payload,
   }
 });
 

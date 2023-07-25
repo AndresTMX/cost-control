@@ -11,18 +11,18 @@ function BalanceItem({balance, income, expense }) {
             <span class='fw-bold fs-4 text-primary'>${balance}</span>
         </section>
 
-        <section class='d-flex flex col-9 justify-content-around align-items-center'>
+        <section class='d-flex flex col-11 justify-content-around align-items-center'>
 
         <div class='d-flex flex-column align-items-center text-positive'>
           <span class='fw-semibold  fs-7'>income</span>
-          <span class='fw-bold fs-5'>+ {income}</span>
+          <span class='fw-bold fs-5'>+ {income.toFixed(2)}</span>
         </div>
 
         <hr class='vertical-line'/>
 
         <div class='d-flex flex-column align-items-center text-negative'>
           <span class='fw-semibold  fs-7'>Gastos</span>
-          <span class='fw-bold fs-5'>- {expense}</span>
+          <span class='fw-bold fs-5'>- {expense.toFixed(2)}</span>
         </div>
 
         </section>
