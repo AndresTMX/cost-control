@@ -1,7 +1,7 @@
 import {BoxAcordeon} from '../BoxAcordeon'
 import { ItemAnalitics } from '../ItemAnalitics';
 
-function BalanceItem({balance, income, expense }) {
+function BalanceItem({balance, income, expense , state}) {
   return (
     <>
       <section class='m-auto  col col-9 col-sm-8 col-md-5 col-xl-3 col-xxl-3 d-flex flex-column rounded-4 align-items-center p-2 border-1 shadow-sm  bg-white'>
@@ -29,7 +29,7 @@ function BalanceItem({balance, income, expense }) {
 
         <section>
             <BoxAcordeon text={'Ver analíticas'} propsZising={'container-fluid'} idCollapse={'collapseAnalitycs'}>
-                <ItemAnalitics balance={balance} income={income} expense={expense}/>
+                <ItemAnalitics balance={balance} income={income} expense={expense} state={state}/>
             </BoxAcordeon>
         </section>
 

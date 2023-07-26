@@ -164,6 +164,17 @@
         "acount": "debito",
         "bank": "banamex"
       }
+    },
+    {
+      "id": "3e16f491-4c1d-49a9-965d-1e9518743458",
+      "date": "2023-07-26T07:19:03.242Z",
+      "concept": "Internet",
+      "amount": "1000",
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "debito",
+        "bank": "bancomer"
+      }
     }
   ]
 }

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Collapse } from "bootstrap";
+import { Modal } from "../Modal";
 
 function BoxAcordeon({ children, text, idCollapse }) {
 
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   return (
     <div>
@@ -13,7 +14,8 @@ function BoxAcordeon({ children, text, idCollapse }) {
             <div class="col accordion-item">
 
                 <button
-                  class="col-2 border-0 p-1 text-muted text-center align-items-center w-100 fs-7"
+                // onClick={() => setIsExpanded(!isExpanded)}
+                  class="col-12 border-0 p-1 text-muted text-center align-items-center w-100 fs-7"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target={`#${idCollapse}`}
@@ -26,10 +28,12 @@ function BoxAcordeon({ children, text, idCollapse }) {
 
               <div
                 id={idCollapse}
-                class={`accordion-collapse collapse ${isExpanded ? "show" : ""}`}
+                class={`col-12 accordion-collapse collapse ${isExpanded ? "show" : ""}`}
                 data-bs-parent="#accordionExample"
               >
+                 <Modal>
                   {children}
+                 </Modal>
               </div>
 
             </div>

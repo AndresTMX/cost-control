@@ -37,6 +37,7 @@ function App() {
         balance={balance}
         income={income}
         expense={expense}
+        state={state}
       />
 
       <RecordDaly records={state.dataMonth} loading={loading} error={error} />
