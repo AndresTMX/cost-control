@@ -13,7 +13,7 @@ import { Bar } from 'react-chartjs-2';
 
 function ItemAnalitics({balance, income, expense, state}) {
 
-  const {month} = state
+const {month} = state
   
 ChartJS.register(
   CategoryScale,
@@ -26,6 +26,11 @@ ChartJS.register(
 
 const options = {
   responsive: true,
+  scales:{
+    y:{
+      beginAtZero:true
+    }
+  },
   plugins: {
     legend: {
       position: 'bottom' as const,
@@ -38,6 +43,9 @@ const options = {
 };
 
 const labels = ['Balance'];
+const width = 100;
+const heigth = 100;
+
 
 const data = {
   labels,
@@ -59,7 +67,7 @@ const data = {
 
     return ( 
         <div className='d-flex p-2 col-12 w-100 bg-light '>
-           <Bar data={data} options={options} />
+           <Bar data={data} options={options} width={width} height={heigth} />
         </div>
      );
 }

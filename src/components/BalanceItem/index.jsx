@@ -27,8 +27,8 @@ function BalanceItem({balance, income, expense , state}) {
 
         </section>
 
-        <section>
-            <BoxAcordeon text={'Ver analíticas'} propsZising={'container-fluid'} idCollapse={'collapseAnalitycs'}>
+        <section className='col-12 d-flex h-auto '>
+            <BoxAcordeon text={'Ver analíticas'} idCollapse={'collapseAnalitycs'}>
                 <ItemAnalitics balance={balance} income={income} expense={expense} state={state}/>
             </BoxAcordeon>
         </section>

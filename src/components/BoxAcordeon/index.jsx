@@ -1,44 +1,32 @@
-import { useState } from "react";
 import { Collapse } from "bootstrap";
 import { Modal } from "../Modal";
 
 function BoxAcordeon({ children, text, idCollapse }) {
 
-  const [isExpanded, setIsExpanded] = useState(true);
-
   return (
-    <div>
+    <div class="d-col-flex col-12 gap-1">
+      <button
+        class="fs-7 border-0 w-100"
+        type="button"
+        data-bs-toggle="collapse"
+        aria-expanded="false"
+        data-bs-target={`#${idCollapse}`}
+      >
+        {text}{" "}
+        <i
+          class={`${
+            children
+              ? "fa-solid fa-chevron-down iconUp"
+              : "fa-solid fa-chevron-down"
+          }`}
+        ></i>
+      </button>
 
-        <div class="row">
-
-            <div class="col accordion-item">
-
-                <button
-                // onClick={() => setIsExpanded(!isExpanded)}
-                  class="col-12 border-0 p-1 text-muted text-center align-items-center w-100 fs-7"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target={`#${idCollapse}`}
-                  aria-expanded={isExpanded}
-                  aria-controls={idCollapse}
-                >
-                  {text} <i class={`${isExpanded ? "fa-solid fa-chevron-down iconUp" : "fa-solid fa-chevron-down"}`}></i>
-                </button>
-            
-
-              <div
-                id={idCollapse}
-                class={`col-12 accordion-collapse collapse ${isExpanded ? "show" : ""}`}
-                data-bs-parent="#accordionExample"
-              >
-                 <Modal>
-                  {children}
-                 </Modal>
-              </div>
-
-            </div>
-
+      <div className="collapse" id={idCollapse}>
+        <div class="card card-body">
+          {children}
         </div>
+      </div>
     </div>
   );
 }
