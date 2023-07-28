@@ -175,6 +175,17 @@
         "acount": "debito",
         "bank": "bancomer"
       }
+    },
+    {
+      "id": "49bc4b67-6519-4b1d-8265-9df7983aee59",
+      "date": "2023-07-26T20:28:44.852Z",
+      "concept": "Pago diario",
+      "amount": "5000",
+      "typeOperation": "retiro",
+      "details": {
+        "acount": "credito",
+        "bank": "banamex"
+      }
     }
   ]
 }

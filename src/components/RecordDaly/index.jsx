@@ -22,7 +22,7 @@ function RecordDaly({ records , loading, error}) {
       )}
 
       {!loading && !error && (
-        <section class="d-flex flex-column col-10 align-items-center m-auto h-75 custom-carousel">
+        <section class="d-flex flex-column col-10 align-items-center m-auto custom-carousel">
           {Object.keys(groupedData).map((date) => (
             <div
               class="d-flex flex-column col-11 m-1 p-2 align-items-center"

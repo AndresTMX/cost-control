@@ -28,6 +28,7 @@ function App() {
         flexDirection: "column",
         gap: "20px",
         backgroundColor: "#DFDFDF",
+        justifyContent:'space-arount',
         height: "100vh",
       }}
     >

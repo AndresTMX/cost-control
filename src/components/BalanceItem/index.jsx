@@ -4,7 +4,7 @@ import { ItemAnalitics } from '../ItemAnalitics';
 function BalanceItem({balance, income, expense , state}) {
   return (
     <>
-      <section class='m-auto  col col-9 col-sm-8 col-md-5 col-xl-3 col-xxl-3 d-flex flex-column rounded-4 align-items-center p-2 border-1 shadow-sm  bg-white'>
+      <section class='m-auto  col col-9 col-sm-8 col-md-5 col-xl-3 col-xxl-3 d-flex flex-column rounded-4 align-items-center p-2 border-1 shadow-sm bg-light'>
 
         <section class='d-flex flex-column align-items-center p-1'>
             <span class='fw-semibold fs-7'>Balance del mes</span>
@@ -27,7 +27,7 @@ function BalanceItem({balance, income, expense , state}) {
 
         </section>
 
-        <section className='col-12 d-flex h-auto '>
+        <section className='col-12 d-flex bg-light'>
             <BoxAcordeon text={'Ver analíticas'} idCollapse={'collapseAnalitycs'}>
                 <ItemAnalitics balance={balance} income={income} expense={expense} state={state}/>
             </BoxAcordeon>

@@ -49,7 +49,7 @@ function useBalance(dataMonth) {
       }
 
       function balance(income, expense) {
-        return income - expense;
+        return parseFloat(income - expense);
       }
 
       const totalIncome = count(arrayAmountPositive);

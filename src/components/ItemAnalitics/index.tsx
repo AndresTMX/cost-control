@@ -44,7 +44,7 @@ const options = {
 
 const labels = ['Balance'];
 const width = 100;
-const heigth = 100;
+const heigth = 70;
 
 
 const data = {
